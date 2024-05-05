@@ -19,13 +19,11 @@ jobs:
   download:
     needs: build
     runs-on: ubuntu-latest
-
     steps:
     - name: download
       uses: actions/upload-artifact@v2
       with:
         name: download hello artifact
         path: ./artifacts
-
     - name: display
       run: cat ./artifacts/hello.txt
